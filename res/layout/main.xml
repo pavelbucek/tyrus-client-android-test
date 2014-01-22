@@ -8,7 +8,7 @@
     <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="@string/app_name"
+            android:text="@string/press_me"
             android:id="@+id/myButton"
             />
 
