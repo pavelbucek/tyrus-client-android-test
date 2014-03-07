@@ -77,7 +77,7 @@ public class MyActivity extends Activity {
                     }
                 };
 
-                asyncTask.execute(null);
+                asyncTask.execute();
             }
         });
     }

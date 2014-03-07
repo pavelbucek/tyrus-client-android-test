@@ -8,13 +8,20 @@ You might notice that I'm not an expert in creating Android apps :) so please do
 How to run
 ----------
 
-Import the project in your favourite IDE and run. I used Android API 18 Platform and JDK 1.7 u51. The application is working on my phone (HTC ONE) and I did not do any extensive testing.
+1. Install Android components.
 
-You have to add Tyrus runtime on classpath and include it to built application. Tyrus provides useful bundle: [tyrus-standalone-client](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22tyrus-standalone-client%22). Please note that you need version 1.5-SNAPSHOT and newer. Version 1.5 is not released yet (Jan 2014), so you need to use 1.5-SNAPSHOT from [java.net snapshot repository](https://maven.java.net/content/repositories/snapshots/org/glassfish/tyrus/bundles/tyrus-standalone-client/).
+  ```
+  $ android update sdk --no-ui --force --all --filter build-tools-19.0.3
+  $ android update sdk --no-ui --force --all --filter android-19
+  ```
 
-The application itself is just one Activity called MyActivity which contains one huge button. When "clicked", Tyrus Client will try to connect to "ws://echo.websocket.org" and send message. You can see the result in the Android console (tag "TYRUS-TEST").
+2. Build and install application.
 
-I have to admit I don't know how to run this just from command line, so sorry for not sharing that information with you. Also you might need to modify file "local.properties" which contains path to installed JDK (it might be regenerated during project import).
+  ```
+  $ gradle clean installDebug
+  ```
+
+The application itself is just one `Activity` called `MyActivity` which contains one huge button. When clicked, Tyrus Client will try to connect to `ws://echo.websocket.org` and send message. You can see the result in the Android console (tag `TYRUS-TEST`).
 
 Links
 -----
@@ -22,6 +29,3 @@ Links
 -   [Tyrus](https://tyrus.java.net)
 -   [TYRUS-256](https://java.net/jira/browse/TYRUS-256)
 -   [My Blog](https://blogs.oracle.com/PavelBucek/)
-
-
-
