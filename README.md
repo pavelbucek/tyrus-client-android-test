@@ -11,7 +11,7 @@ How to run
 1. Install Android components.
 
   ```
-  $ android update sdk --no-ui --force --all --filter build-tools-19.0.1
+  $ android update sdk --no-ui --force --all --filter build-tools-19.0.3
   $ android update sdk --no-ui --force --all --filter android-19
   ```
 
